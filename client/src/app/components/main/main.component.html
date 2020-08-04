@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>AMAN</h1>
+    <span class="menu-spacer"></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<ul>
+  <li *ngFor="let joke of (jokes$ | async)">
+    <mat-card *ngIf="joke.type === 'single'" class="example-card" (click)="getJoke(joke)">
+      <mat-card-header>
+        <mat-card-title>{{joke.joke}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+        
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card *ngIf="joke.type === 'twopart'" class="example-card" (click)="getJoke(joke)">
+      <mat-card-header>
+        <mat-card-title>{{joke.setup}}</mat-card-title>
+        <mat-card-subtitle>{{joke.delivery}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+        
+        </p>
+      </mat-card-content>
+    </mat-card>
+   </li>
+</ul>

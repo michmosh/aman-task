@@ -1,0 +1,11 @@
+ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+li mat-card{
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    margin:0.5rem;
+}

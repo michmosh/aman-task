@@ -1,0 +1,27 @@
+<mat-card *ngIf="data.type === 'twopart'" class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{data.setup}}</mat-card-title>
+    <mat-card-subtitle>{{data.delivery}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+    
+    </p>
+  </mat-card-content>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Close</button>
+</div>
+</mat-card>
+<mat-card *ngIf="data.type === 'single'" class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{data.joke}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+    
+    </p>
+  </mat-card-content>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Close</button>
+</div>
+</mat-card>
